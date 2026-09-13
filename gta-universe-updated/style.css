@@ -1,0 +1,162 @@
+/* ================================
+   GTA Universe — shared animations
+   ================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---- Header entrance ---- */
+header {
+  animation: slideDown .5s ease both;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);      opacity: 1; }
+}
+
+/* ---- Nav link underline sweep ---- */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width .25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ---- Hero entrance ---- */
+.hero {
+  animation: heroFade 1s ease both;
+}
+
+.hero h1 {
+  animation: heroRise .8s .15s ease both;
+}
+
+.hero p {
+  animation: heroRise .8s .3s ease both;
+}
+
+@keyframes heroFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Scroll-reveal cards / sections ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children of grids slightly for a nicer wave-in effect */
+.games .card.reveal:nth-child(1),
+.features .feature.reveal:nth-child(1),
+.gallery img:nth-child(1) { transition-delay: .02s; }
+.games .card.reveal:nth-child(2),
+.features .feature.reveal:nth-child(2),
+.gallery img:nth-child(2) { transition-delay: .08s; }
+.games .card.reveal:nth-child(3),
+.features .feature.reveal:nth-child(3),
+.gallery img:nth-child(3) { transition-delay: .14s; }
+.games .card.reveal:nth-child(4) { transition-delay: .20s; }
+.games .card.reveal:nth-child(5) { transition-delay: .26s; }
+.games .card.reveal:nth-child(6) { transition-delay: .32s; }
+
+/* ---- Buttons ---- */
+.btn {
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 213, 255, .25);
+}
+
+.btn:active {
+  transform: translateY(0) scale(.98);
+}
+
+/* ---- Game / feature cards ---- */
+.card, .feature, .games .card {
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover, .feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, .45);
+}
+
+/* ---- Gallery images ---- */
+.gallery img {
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08);
+}
+
+/* ---- Table rows ---- */
+table tr {
+  transition: background .2s ease;
+}
+
+table tr:hover td {
+  background: rgba(0, 213, 255, .08);
+}
+
+/* ---- Cheat code cells: quick flash-copy feedback ---- */
+td.copied {
+  background: rgba(0, 255, 153, .18) !important;
+  transition: background .3s ease;
+}
+
+/* ---- Countdown boxes pulse ---- */
+.box {
+  transition: transform .25s ease;
+}
+
+.box:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* ---- Form focus states ---- */
+input:focus, textarea:focus {
+  outline: 2px solid #00d5ff;
+  outline-offset: 2px;
+  transition: outline-color .2s ease;
+}
+
+/* ---- Respect reduced motion preferences ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  header, .hero, .hero h1, .hero p, .reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

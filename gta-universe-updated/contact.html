@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | GTA Universe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+}
+
+header{
+background:#000;
+padding:18px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#00d5ff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00d5ff;
+}
+
+.hero{
+
+height:280px;
+
+background:linear-gradient(135deg,#000,#1d1d1d);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+}
+
+.hero h1{
+
+font-size:60px;
+
+color:#00d5ff;
+
+}
+
+.hero p{
+
+margin-top:10px;
+
+font-size:18px;
+
+}
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:60px 20px;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:40px;
+
+}
+
+.info{
+
+background:#181818;
+
+padding:30px;
+
+border-radius:12px;
+
+}
+
+.info h2{
+
+color:#00d5ff;
+
+margin-bottom:20px;
+
+}
+
+.info p{
+
+margin:15px 0;
+
+line-height:1.8;
+
+}
+
+form{
+
+background:#181818;
+
+padding:30px;
+
+border-radius:12px;
+
+}
+
+form h2{
+
+color:#00d5ff;
+
+margin-bottom:20px;
+
+}
+
+input,textarea{
+
+width:100%;
+
+padding:15px;
+
+margin-bottom:18px;
+
+background:#262626;
+
+border:none;
+
+outline:none;
+
+border-radius:8px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+textarea{
+
+height:180px;
+
+resize:none;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+background:#00d5ff;
+
+border:none;
+
+border-radius:8px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#00b9df;
+
+}
+
+#status{
+
+margin-top:20px;
+
+font-size:18px;
+
+font-weight:bold;
+
+text-align:center;
+
+}
+
+footer{
+
+background:#000;
+
+text-align:center;
+
+padding:30px;
+
+margin-top:60px;
+
+}
+
+@media(max-width:900px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+header{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+}
+
+</style>
+
+<link rel="stylesheet" href="style.css">
+<script src="animate.js" defer></script>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">GTA Universe</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gtai.html">GTA I</a>
+<a href="gtaii.html">GTA II</a>
+<a href="gta3.html">GTA III</a>
+<a href="gta3de.html">III DE</a>
+<a href="gtavc.html">Vice City</a>
+<a href="gtavcde.html">VC DE</a>
+<a href="gtasa.html">San Andreas</a>
+<a href="gtasade.html">SA DE</a>
+<a href="gta4.html">GTA IV</a>
+<a href="gtav.html">GTA V</a>
+<a href="rdr.html">RDR</a>
+<a href="rdrii.html">RDR2</a>
+<a href="cheats.html">Cheats</a>
+<a href="news.html">News</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h1>Contact Us</h1>
+
+<p>Send us your questions, ideas or feedback.</p>
+
+</section>
+
+<div class="container">
+
+<div class="info reveal">
+
+<h2>Contact Information</h2>
+
+<p><strong>Email</strong><br>powerwoodcreatorspublic@gmail.com</p>
+
+<p><strong>Website</strong><br>GTA Universe</p>
+
+<p><strong>Support</strong><br>Replies usually within 24 hours.</p>
+
+<p><strong>Message Us</strong><br>We appreciate your feedback and suggestions.</p>
+
+</div>
+
+<form id="contactForm"
+action="https://formspree.io/f/mwvddevv"
+method="POST">
+
+<h2>Send Message</h2>
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Your Email"
+required>
+
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+<textarea
+name="message"
+placeholder="Write your message..."
+required></textarea>
+
+<button id="sendBtn" type="submit">
+
+Send Message
+
+</button>
+
+<p id="status"></p>
+
+</form>
+
+</div>
+
+<footer>
+
+<h2>GTA Universe</h2>
+
+<p>© 2026 GTA Universe</p>
+
+</footer>
+
+<script>
+
+const form=document.getElementById("contactForm");
+
+const status=document.getElementById("status");
+
+const btn=document.getElementById("sendBtn");
+
+form.addEventListener("submit",async(e)=>{
+
+e.preventDefault();
+
+btn.innerHTML="Sending...";
+
+btn.disabled=true;
+
+const data=new FormData(form);
+
+const response=await fetch(form.action,{
+
+method:"POST",
+
+body:data,
+
+headers:{
+
+'Accept':'application/json'
+
+}
+
+});
+
+if(response.ok){
+
+status.style.color="#00ff99";
+
+status.innerHTML="✅ Your message has been sent successfully!";
+
+form.reset();
+
+}else{
+
+status.style.color="red";
+
+status.innerHTML="❌ Failed to send your message. Please try again.";
+
+}
+
+btn.innerHTML="Send Message";
+
+btn.disabled=false;
+
+});
+
+</script>
+
+</body>
+</html>

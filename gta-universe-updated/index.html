@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTA Universe | Free Rockstar Games Downloader</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#0c0c0c;
+color:white;
+font-family:Poppins,sans-serif;
+
+}
+
+header{
+
+background:#111;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:999;
+
+}
+
+.logo{
+
+font-size:30px;
+font-family:Orbitron;
+font-weight:bold;
+color:#00d5ff;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+margin-left:25px;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#00d5ff;
+
+}
+
+.hero{
+
+height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1600&q=80") center/cover;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+}
+
+.hero p{
+
+margin-top:15px;
+font-size:22px;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#00d5ff;
+color:black;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+
+}
+
+section{
+
+padding:70px 10%;
+
+}
+
+h2{
+
+margin-bottom:30px;
+font-size:40px;
+
+}
+
+.games{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
+}
+
+.card{
+
+background:#181818;
+border-radius:10px;
+overflow:hidden;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+height:300px;
+object-fit:cover;
+
+}
+
+.card h3{
+
+padding:15px;
+
+}
+
+.card a{
+
+display:block;
+background:#00d5ff;
+text-align:center;
+padding:12px;
+text-decoration:none;
+color:black;
+font-weight:bold;
+
+}
+
+.countdown{
+
+text-align:center;
+
+}
+
+.timer{
+
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+flex-wrap:wrap;
+
+}
+
+.box{
+
+background:#181818;
+padding:25px;
+width:130px;
+border-radius:10px;
+
+}
+
+.box h1{
+
+font-size:45px;
+
+}
+
+iframe{
+
+width:100%;
+height:500px;
+border:none;
+border-radius:10px;
+margin-bottom:30px;
+
+}
+
+.news{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+
+}
+
+.news article{
+
+background:#181818;
+padding:20px;
+border-radius:10px;
+
+}
+
+footer{
+
+background:#111;
+padding:30px;
+text-align:center;
+margin-top:50px;
+
+}
+
+</style>
+
+<script src="animate.js" defer></script>
+</head>
+<body>
+
+<header>
+
+<div class="logo">GTA Universe</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="gtai.html">GTA I</a>
+<a href="gtaii.html">GTA II</a>
+<a href="gta3.html">GTA III</a>
+<a href="gta3de.html">III DE</a>
+<a href="gtavc.html">Vice City</a>
+<a href="gtavcde.html">VC DE</a>
+<a href="gtasa.html">San Andreas</a>
+<a href="gtasade.html">SA DE</a>
+<a href="gta4.html">GTA IV</a>
+<a href="gtav.html">GTA V</a>
+<a href="rdr.html">RDR</a>
+<a href="rdrii.html">RDR2</a>
+<a href="cheats.html">Cheats</a>
+<a href="news.html">News</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Grand Theft Auto Universe</h1>
+
+<p>Your Fan Hub for GTA Games, News, Guides & Trailers</p>
+
+<a class="btn" href="#games">Explore Games</a>
+
+</div>
+
+</section>
+
+<section class="countdown">
+
+<h2>Grand Theft Auto VI Countdown</h2>
+
+<p>Launching November 19</p>
+
+<div class="timer">
+
+<div class="box reveal">
+
+<h1 id="days">0</h1>
+
+Days
+
+</div>
+
+<div class="box reveal">
+
+<h1 id="hours">0</h1>
+
+Hours
+
+</div>
+
+<div class="box reveal">
+
+<h1 id="minutes">0</h1>
+
+Minutes
+
+</div>
+
+<div class="box reveal">
+
+<h1 id="seconds">0</h1>
+
+Seconds
+
+</div>
+
+</div>
+
+</section>
+
+<section id="games">
+
+<h2>Featured Games</h2>
+
+<div class="games">
+
+<div class="card reveal">
+
+<img src="https://www.gtabase.com/igallery/gta3-covers/gta-3-cover-art-usa-1920.jpg">
+
+<h3>GTA III</h3>
+
+<a href="gta3.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://tse2.mm.bing.net/th/id/OIP.lR36so3UxtYb_nuzYKNJ_AHaJ4?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+
+<h3>GTA III - Definitive Edition</h3>
+
+<a href="gta3de.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/c/ce/Vice-city-cover.jpg">
+
+<h3>Vice City</h3>
+
+<a href="gtavc.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://tse3.mm.bing.net/th/id/OIP.vZAJaiXDnrhI_-CDV2T9zwHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+
+<h3>Vice City - Definitive Edition</h3>
+
+<a href="gtavcde.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/c/c4/GTASABOX.jpg">
+
+<h3>San Andreas</h3>
+
+<a href="gtasa.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://tse1.mm.bing.net/th/id/OIP.RJDjgbMv21ZJ10n68taihgHaLH?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+
+<h3>San Andreas - Definitive Edition</h3>
+
+<a href="gtasade.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Grand_Theft_Auto_IV_cover.jpg">
+
+<h3>GTA IV</h3>
+
+<a href="gta4.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png">
+
+<h3>GTA V</h3>
+
+<a href="gtav.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://th.bing.com/th/id/R.81a67fb44da526384e7185bf0cbe6b10?rik=5fy%2byNjMnDePGg&riu=http%3a%2f%2fimages3.wikia.nocookie.net%2f__cb20100928175821%2freddeadredemption%2fimages%2ff%2ff7%2fRdr_cover.jpg&ehk=VtHb94ex9kodIVioxNsGg7Q9kTN0vM3p0RGthHLiP3M%3d&risl=&pid=ImgRaw&r=0">
+
+<h3>Read Dead Redemption</h3>
+
+<a href="rdr.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://tse4.mm.bing.net/th/id/OIP.8G4yWLW5t0U6zp8sCUt15AHaJJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+
+<h3>Red Dead Redemption II</h3>
+
+<a href="rdrii.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://th.bing.com/th/id/R.8ca9e01b3936b24a4037230a041a7fbd?rik=0VVkdYd2xBPCnQ&riu=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20140724153847%2fgta%2fpl%2fimages%2f6%2f64%2fGTA1_%2528boxart%2529.jpg&ehk=ITkrPLx6ooamAc6A048x0FPPqZqLUI0EsCJy%2b4unL3g%3d&risl=&pid=ImgRaw&r=0">
+
+<h3>GTA I</h3>
+
+<a href="gtai.html">View Details</a>
+
+</div>
+
+<div class="card reveal">
+
+<img src="https://www.igrandtheftauto.com/content/images/gta2-box-art-1280x1580.jpg">
+
+<h3>GTA II</h3>
+
+<a href="gtaii.html">View Details</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>GTA VI Official Trailers</h2>
+
+<iframe src="https://www.youtube.com/embed/QdBZY2fkU-0"
+allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/VQRLujxTm3c"
+allowfullscreen></iframe>
+
+</section>
+
+<section>
+
+<h2>Latest News</h2>
+
+<div class="news reveal">
+
+<article>
+
+<h3>GTA VI Coming November 19</h3>
+
+<p>Stay tuned for the latest official Rockstar Games announcements.</p>
+
+</article>
+
+<article>
+
+<h3>Classic GTA Games</h3>
+
+<p>Explore the history of GTA III, Vice City, San Andreas, GTA IV and GTA V.</p>
+
+</article>
+
+<article>
+
+<h3>Cheat Guides</h3>
+
+<p>Browse classic cheat codes and gameplay tips for supported GTA titles.</p>
+
+</article>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>GTA Universe Fan Website</h3>
+
+<p>This is an unofficial fan website and is not affiliated with Rockstar Games.</p>
+
+<p>© 2026 GTA Universe</p>
+
+</footer>
+
+<script>
+
+const release = new Date("November 19, 2026 12:00:00").getTime();
+
+setInterval(function(){
+
+const now = new Date().getTime();
+
+const distance = release - now;
+
+const days = Math.floor(distance/(1000*60*60*24));
+
+const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+const seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+</script>
+
+</body>
+</html>
